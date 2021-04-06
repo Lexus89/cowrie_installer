@@ -29,7 +29,7 @@ set -x
 apt-get update
 apt-get -y -f install libssl-dev libffi-dev build-essential libpython3-dev python3-minimal authbind virtualenv
 
-pip install -U supervisor
+pip3 install -U supervisor
 /etc/init.d/supervisor start || true
 
 if [ -e "/etc/ssh/sshd_config" ]; then 
@@ -67,8 +67,8 @@ virtualenv --python=python3 cowrie-env #env name has changed to cowrie-env on la
 source cowrie-env/bin/activate
 # without the following, i get this error:
 # Could not find a version that satisfies the requirement csirtgsdk (from -r requirements.txt (line 10)) (from versions: 0.0.0a5, 0.0.0a6, 0.0.0a5.linux-x86_64, 0.0.0a6.linux-x86_64, 0.0.0a3)
-pip install csirtgsdk==0.0.0a6
-pip install -r requirements.txt 
+pip3 install csirtgsdk==0.0.0a6
+pip3 install -r requirements.txt 
 
 cd etc
 cp cowrie.cfg.dist cowrie.cfg

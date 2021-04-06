@@ -27,7 +27,7 @@ set -e
 set -x
 
 apt-get update
-apt-get -y -f install python-dev git supervisor authbind openssl python-virtualenv build-essential python-gmpy2 libgmp-dev libmpfr-dev libmpc-dev libssl-dev python-pip libffi-dev
+apt-get -y -f install python-virtualenv libssl-dev libffi-dev build-essential libpython3-dev python3-minimal authbind virtualenv
 
 pip install -U supervisor
 /etc/init.d/supervisor start || true

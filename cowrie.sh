@@ -63,7 +63,7 @@ git clone https://github.com/cowrie/cowrie.git cowrie
 #EOF
 
 cd cowrie
-virtualenv cowrie-env #env name has changed to cowrie-env on latest version of cowrie
+virtualenv --python=python3 cowrie-env #env name has changed to cowrie-env on latest version of cowrie
 source cowrie-env/bin/activate
 # without the following, i get this error:
 # Could not find a version that satisfies the requirement csirtgsdk (from -r requirements.txt (line 10)) (from versions: 0.0.0a5, 0.0.0a6, 0.0.0a5.linux-x86_64, 0.0.0a6.linux-x86_64, 0.0.0a3)
